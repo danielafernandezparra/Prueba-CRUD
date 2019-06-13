@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>ToDo List</h1>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h1>No completados</h1>
+      <% @todos.each do |t| %>
+      <% if !t.completed? %>
+      <p> <%= t.description %> </p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h1>Completados</h1>
+      <% @todos.each do |t| %>
+      <% if t.completed? %>
+      <p> <%= t.description %> </p>
+        <% end %>
+      <% end %>
+  </div>
