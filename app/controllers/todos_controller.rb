@@ -14,7 +14,11 @@ class TodosController < ApplicationController
   redirect_to todos_path
   end
 
-  
+  def show
+  end
+
+  def edit
+  end
 
   private
   def todo_params
